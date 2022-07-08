@@ -62,3 +62,29 @@ while (selection !== 3){
 
         }
     }
+    if (selection === 2){
+        console.log("You've chosen to mark item as completed. ");
+        console.log("Which item would you like to mark as completed? ");
+        toComplete = Number(prompt("> "));
+        console.log("________________________________________________");
+        console.log("You have " + Number(todoList.length) + " items in your to-do list. ");
+
+        for (let i = 0; i < todoList.length; i++){
+                completed[toComplete - 1] = true;
+
+                if (completed[i] === false){
+                        status[i] = "[Incomplete] ";
+                }
+                else if (completed[i] === true){
+                        status[i] = "[Complete] ";
+                }
+        
+                console.log(Number(i + 1) + "." + [status[i]] + todoList[i]);
+                // console.log("________________________________________________");
+        }
+}
+
+if (selection === 3){
+        return console.log("Adios! ");
+}
+}
